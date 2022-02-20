@@ -46,4 +46,5 @@ docker run --rm \
     -v $(pwd)/2-artifacts/models:/results:rw \
     -e LOCAL_UID=1000 \
     -e LOCAL_GID=1000 \
+    -p 8000:8000 \
   mut:5000/akita/$model:latest execute-algorithm "$algorithmConfig"

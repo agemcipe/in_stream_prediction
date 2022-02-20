@@ -27,7 +27,6 @@ public class MainRemoteCountingWindow {
                 final long windowSlide = params.getLong("windowSlide");
                 final boolean hasAnomaly = params.getBoolean("hasAnomalyColumn"); // TODO: Not working
 
-                assert hasAnomaly == true;
                 // parse input text file
                 DataStream<VariableStreamElement> dataStream = env.readTextFile(params.get("inputFile"))
                                 .map(new MapFunction<String, VariableStreamElement>() {
@@ -53,6 +52,6 @@ public class MainRemoteCountingWindow {
                 // Time.seconds(1)))
                 // .process(new BaseHttpRequestProcessAllWindowFunction());
 
-                env.execute("DataStream Remote");
+                env.execute(params.get("runName", "Main Remote Counting"));
         }
 }
