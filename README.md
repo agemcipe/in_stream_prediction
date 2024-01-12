@@ -1,7 +1,4 @@
 # Apache Flink Stream Application with Remote ML Model
-
-## Overview
-
 This application showcases how to use Apache Flink for real-time stream processing, coupled with the utilization of a remote Machine Learning (ML) model for making predictions on elements within the data stream.
 The idea here was to test how the two systems - stream processing and ML Model - compete for resources on the same machine or how the latency of running the model on a remote machine (but with designated hardware) affects performance.  
 
